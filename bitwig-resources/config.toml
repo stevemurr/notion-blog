@@ -1,0 +1,11 @@
+baseURL = "https://bitwig-resources.murr.io/"
+languageCode = "en-us"
+title = "Bitwig Resources"
+theme = "hugo-cards"
+
+[params]
+  favicon = ""
+  defaultImage = "gopher.jpg"
+  twitter = ""
+  youtube = ""
+  github = ""
