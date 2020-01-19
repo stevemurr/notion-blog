@@ -8,11 +8,10 @@ function setup {
 }
 
 function run {
-
     python main.py
     cd ./bitwig-resources
     hugo
-    scp -r $(pwd)/public/* ditr:/www/bitwig-resources
+    rsync -a --info=progress2 $(pwd)/public/* ditr:/www/bitwig-resources 
     cd ..
 }
 
@@ -22,7 +21,7 @@ function main {
         echo ":: Running ..."
         setup & run
         echo ":: Sleeping ..."
-        sleep 30
+        sleep 300
     done
 }
 
