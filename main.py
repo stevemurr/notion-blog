@@ -34,6 +34,7 @@ class NotionResource(object):
 
 
 if __name__ == "__main__":
+    args = parse_args()
     api = falcon.API()
     notion_resource = NotionResource()
     api.add_route("/api/table", notion_resource)
